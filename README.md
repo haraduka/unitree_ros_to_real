@@ -68,3 +68,24 @@ torque_lcm
 ```
 
 And when you run the high level controller, please make sure the robot is standing on the ground. The high level exmaple only has `walk_lcm`.
+
+
+
+# For My Case
+```
+  cd catkin_ws/src
+  git clone https://github.com/k-okada/unitree_legged_sdk.git # go to develop branch
+  git clone https://github.com/haraduka/unitree_ros_to_real.git # go to develop branch
+  catkin bt in all packages
+  connect ethernet between my PC and robot # set IP address as 192.168.123.162
+  ping 192.168.123.161 # robot IP
+  roslaunch unitree_ros_to_real ros_client.launch
+  rosrun teleop_twist_keyboard teleop_twist_keyboard.py /cmd_vel:=/go1/cmd_vel
+```
+
+# Tips
+```
+  Power On: push twice and continue to push the power button (the same with controller)
+  Power Off: push twice and continue to push the power button
+  Robot Username: pi, Password: 123 (default)
+```
